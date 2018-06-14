@@ -1,0 +1,7 @@
+---
+applications:
+- name: teleporter-route-service
+  memory: 128M
+  instances: 2
+  env:
+    GOPACKAGENAME: teleporter
