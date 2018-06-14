@@ -3,5 +3,6 @@ applications:
 - name: teleporter-route-service
   memory: 128M
   instances: 2
-  env:
-    GOPACKAGENAME: teleporter
+  buildpack: binary_buildpack
+  command: ./routing-linux
+  path: ./build/
