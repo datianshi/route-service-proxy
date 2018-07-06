@@ -24,9 +24,9 @@ func NewProxy(transport http.RoundTripper, forwardURL MapForwardURL) http.Handle
 			if err != nil {
 				log.Fatalln(err.Error())
 			}
-			log.Println(url)
-			req.URL = url
 			req.Host = url.Host
+			req.URL = url
+			req.URL.Host = "10.193.148.251"
 		},
 		Transport: transport,
 	}
